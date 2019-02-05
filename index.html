@@ -84,6 +84,11 @@
           <p>Соседям на радость!</p>
           <a href="catalog.html">Открыть каталог</a>
         </div>
+        <div>
+          <p>Перфораторы</p>
+          <p>Настоящие мужские игрушки</p>
+          <a href="catalog.html">Открыть каталог</a>
+        </div>
       </section>
       <section class="popular-goods">
         <div>
@@ -95,24 +100,24 @@
             <img src="image/perforator-1-index.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 9000">
             <h3>Перфоратор Bosch BFG 9000</h3>
             <span>32500 р.</span>
-            <span>25500 р.</span>
+            <span class="red-button">25500 р.</span>
           </li>
           <li>
             <img src="image/perforator-2-index.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 3000">
             <h3>Перфоратор Bosch BFG 3000</h3>
             <span>22500 р.</span>
-            <span>15500 р.</span>
+            <span class="red-button">15500 р.</span>
           </li>
           <li>
             <img src="image/perforator-3-index.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 6000">
             <h3>Перфоратор Bosch BFG 6000</h3>
             <span>30500 р.</span>
-            <span>25500 р.</span>
+            <span class="red-button">25500 р.</span>
           </li>
           <li>
             <img src="image/perforator-4-index.jpg" width="218" height="170" alt="Перфоратор Bosch BFG 2000">
             <h3>Перфоратор Bosch BFG 2000</h3>
-            <span>12500 р.</span>
+            <span class="red-button">12500 р.</span>
             <span class="new"></span>
           </li>
         </ul>
@@ -197,6 +202,7 @@
           <h3>Кредит</h3>
           <p>Залезть в долговую яму стало проще!<br>
              Кредитные консультанты придут вам на помощь.</p>
+          <button type="submit">Отправить заявку</button>
         </section>
       </section>
       <section class="about-company">
@@ -220,6 +226,30 @@
           <img src="image/map.png" width="300" height="158" alt="Адрес Техномарта: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
           <a href="#">Заблудились? Напишите нам!</a>
         </div>
+      </section>
+      <section class="modal modal-map">
+        <h2 class="visually-hidden">Как до нас добраться?</h2>
+        <img src="image/map-popup.png" width="940" height="446" alt="Адрес Техномарта: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+        <button class="close-button">Закрыть</button>
+      </section>
+      <section class="modal modal-form">
+        <h2 class="visually-hidden">Форма отправки письма</h2>
+        <form class="letter-form" method="post" action="https://echo.htmlacademy.ru">
+          <p class="letter-input">
+            <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+            <label for="name">Ваше имя:</label>
+          </p>
+          <p class="letter-input">
+            <input type="text" name="e-mail" id="e-mail" placeholder="email@example.com">
+            <label for="e-mail">Ваш e-mail:</label>
+          </p>
+          <p class="letter-input">
+            <input type="text" name="letter-text" id="letter-text" placeholder="В свободной форме">
+            <label for="letter-text">Текст письма:</label>
+          </p>
+          <button type="submit">Отправить</button>
+          <button class="close-button">Закрыть</button>
+        </form>
       </section>
     </main>
     <footer>
