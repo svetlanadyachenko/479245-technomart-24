@@ -100,14 +100,7 @@ input[type="radio"].visually-hidden {
   background-color: #293449;
 }
 
-.search-input:-moz-placeholder {
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 17px;
-  line-height: 18px;
-  color: #ffffff;
-}
-
-.search-input::-webkit-input-placeholder {
+.search-input::placeholder {
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -292,12 +285,12 @@ h1 {
 
 .site-navigation {
   width: 940px;
-  margin-left: 130px;
+  margin: 0 auto;
   background-color: #32425c;
   box-shadow: inset 0px -5px 0 0 #293449;
 }
 
-.site-navigation-list{
+.site-navigation-list {
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -386,14 +379,8 @@ h1 {
   background-color: #ffc047;
 }
 
-
-
-
-
-
-
-
 .index-catalog-list a {
+  display: inline-block;
   width: 135px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
@@ -441,6 +428,7 @@ h1 {
 }
 
 .slider a {
+  display: inline-block;
   width: 195px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
@@ -496,6 +484,7 @@ h1 {
 
 .popular-goods-header a,
 .popular-manufacturers-header a {
+  display: inline-block;
   width: 253px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
@@ -509,12 +498,25 @@ h1 {
   height: 38px;
 }
 
+.popular-goods-header a:hover,
+.popular-manufacturers-header a:hover,
+.popular-goods-header a:focus,
+.popular-manufacturers-header a:focus {
+  background-color: #ca2c37;
+}
+
+.popular-goods-header a:active,
+.popular-manufacturers-header a:active {
+  background-color: #ba2732;
+}
+
 .manufacturers-catalog {
   display: flex;
 }
 
 .manufacturers-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -619,6 +621,7 @@ h1 {
 }
 
 .service-credit a {
+  display: inline-block;
   width: 195px;
   height: 38px;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -627,8 +630,18 @@ h1 {
   font-weight: 400;
   color: #ffffff;
   text-transform: uppercase;
+  text-align: center;
   background-color: #ff5357;
   border: none;
+}
+
+.service-credit a:hover,
+.service-credit a:focus {
+  background-color: #ca2c37;
+}
+
+.service-credit a:active {
+  background-color: #ba2732;
 }
 
 .about-company {
@@ -664,6 +677,8 @@ h1 {
 }
 
 .about-company a {
+  display: inline-block;
+  width: 220px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -672,6 +687,19 @@ h1 {
   text-align: center;
   text-transform: uppercase;
   background-color: #ee3643;
+}
+
+.about-company a:hover,
+.about-company a:focus {
+  background-color: #ca2c37;
+}
+
+.about-company a:active {
+  background-color: #ba2732;
+}
+
+.contacts a {
+  width: 300px;
 }
 
 .catalog-position-nav {
@@ -801,8 +829,20 @@ h1 {
   background-color: #ffffff;
 }
 
+.filter-button:hover,
+.filter-button:focus {
+  border: 1px solid #bdc6ca;
+}
+
+.filter-button:active {
+  border: 1px solid #ee3643;
+  outline: none;
+}
+
 .catalog-list {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   list-style: none;
 }
 
@@ -912,6 +952,18 @@ h1 {
   border: 1px solid #e5e5e5;
 }
 
+.pagination-item:nth-of-type(4) {
+  width: 140px;
+}
+
+.pagination-item-current {
+  background-color: #ee3643;
+}
+
+.pagination-item-current a {
+  color: #ffffff;
+}
+
 .pagination-item a {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
@@ -919,19 +971,6 @@ h1 {
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
-}
-
-.pagination-item-current {
-  background-color: #ee3643;
-}
-
-.pagination-item-current a{
-  color: #ffffff;
-  background-color: #ee3643;
-}
-
-.pagination-item:nth-of-type(4) {
-  width: 140px;
 }
 
 .pagination-item:hover,
@@ -974,7 +1013,7 @@ h1 {
   text-align: center;
 }
 
-.basket-buy-button {
+.basket-buy-buttons {
   width: 620px;
   height: 112px;
   background-color: #f1f1f1;
@@ -993,6 +1032,15 @@ h1 {
   background-color: #ee3643;
 }
 
+.checkout:hover,
+.checkout:focus {
+  background-color: #ca2c37;
+}
+
+.checkout:active {
+  background-color: #ba2732;
+}
+
 .continue-shopping {
   width: 220px;
   height: 38px;
@@ -1004,6 +1052,17 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   background-color: #ffffff;
+}
+
+.continue-shopping:hover,
+.continue-shopping:focus {
+  color: #ffffff;
+  background-color: #ca2c37;
+}
+
+.continue-shopping:active {
+  color: #ffffff;
+  background-color: #ba2732;
 }
 
 .close-button {
@@ -1083,6 +1142,15 @@ h1 {
   border: none;
 }
 
+.submit-button:hover,
+.submit-button:focus {
+  background-color: #ca2c37;
+}
+
+.submit-button:active {
+  background-color: #ba2732;
+}
+
 .modal-login-form {
   width: 620px;
   height: 224px;
@@ -1139,6 +1207,15 @@ h1 {
   padding-top: 20px;
   background-color: #ee3643;
   box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+}
+
+.footer-logo:hover,
+.footer-logo:focus {
+  background-color: #ca2c37;
+}
+
+.footer-logo:active {
+  background-color: #ba2732;
 }
 
 .adress,
