@@ -853,7 +853,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   background-color: #f4f7f9;
-  outline: 1px solid red;
 }
 
 .service h2 {
@@ -866,33 +865,23 @@ input[type="radio"].visually-hidden {
   text-align: left;
 }
 
-.service h3 {
-  font-family: "Cuprum", "Arial", sans-serif;
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
-  color: #32425c;
-  text-transform: uppercase;
-  text-align: left;
-}
-
 .service-container {
   width: 398px;
   margin-left: 130px;
   padding-top: 68px;
-  padding-bottom: 74px;
-  outline: 1px solid red;
+  padding-bottom: 28px;
 }
 
 .service-slider-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   width: 940px;
   margin: 0 auto;
-  outline: 1px solid green;
 }
 
 .service-list {
+  display: flex;
+  flex-direction: column;
   padding: 0;
   list-style: none;
 }
@@ -929,38 +918,65 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-list {
-  width: 620px;
-  margin-bottom: 100px;
+  display: flex;
+  width: 940px;
+  padding-top: 46px;
+  padding-bottom: 99px;
 }
 
-.service-delivery {
+.slider-list:first-of-type {
   background-image: url("../image/delivery.png");
   background-repeat: no-repeat;
   background-size: 468px 261px;
-  background-position: right;
+  background-position: bottom right;
 }
 
-.service-delivery p {
-  width: 275px;
-}
-
-.service-warranty {
+.slider-list:nth-of-type(2) {
   background-image: url("../image/warranty.png");
   background-repeat: no-repeat;
   background-size: 389px 283px;
-  background-position: right;
+  background-position: bottom right;
 }
 
-.service-credit {
+.slider-list:last-of-type {
   background-image: url("../image/credit.png");
   background-repeat: no-repeat;
   background-size: 465px 285px;
-  background-position: right;
+  background-position: bottom right;
+}
+
+.slider-list h3 {
+  margin: 0;
+  margin-top: 18px;
+  margin-left: 80px;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #32425c;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.service-delivery p {
+  margin-left: 80px;
+  width: 275px;
+}
+
+.service-warranty p {
+  margin-left: 80px;
+  width: 379px;
+}
+
+.service-credit p {
+  margin-left: 80px;
+  width: 279px;
 }
 
 .service-credit a {
   display: inline-block;
   width: 195px;
+  margin-left: 80px;
   padding-top: 14px;
   padding-bottom: 12px;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -1157,7 +1173,19 @@ input[type="radio"].visually-hidden {
   background-color: #f7f3ec;
 }
 
+.filters fieldset {
+  padding-bottom: 25px;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.filters fieldset:last-of-type {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
 .filters-form legend {
+  padding-top: 25px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 30px;
@@ -1241,6 +1269,9 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 75px;
   width: 140px;
   height: 38px;
   font-family: "PT Sans", "Arial", sans-serif;
