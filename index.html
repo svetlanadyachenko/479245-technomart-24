@@ -115,6 +115,7 @@
         <div class="index-catalog">
           <ul class="index-catalog-list">
             <li class="index-catalog-item catalog-item">
+              <div class="flag flag-new">новинка</div>
               <div class="actions">
                 <a href="#" class="buy-button">Купить</a>
                 <a href="#" class="bookmarks-button">В закладки</a>
@@ -127,6 +128,7 @@
               <div class="red-price-button">25500 р.</div>
             </li>
             <li class="index-catalog-item catalog-item">
+              <div class="flag flag-new">новинка</div>
               <div class="actions">
                 <a href="#" class="buy-button">Купить</a>
                 <a href="#" class="bookmarks-button">В закладки</a>
@@ -139,6 +141,7 @@
               <div class="red-price-button">15500 р.</div>
             </li>
             <li class="index-catalog-item catalog-item">
+              <div class="flag flag-new">новинка</div>
               <div class="actions">
                 <a href="#" class="buy-button">Купить</a>
                 <a href="#" class="bookmarks-button">В закладки</a>
@@ -151,7 +154,7 @@
               <div class="red-price-button">25500 р.</div>
             </li>
             <li class="index-catalog-item catalog-item">
-              <div class="flag flag-new">новинка</div>
+              <div class="flag flag-new flag-show">новинка</div>
               <div class="actions">
                 <a href="#" class="buy-button">Купить</a>
                 <a href="#" class="bookmarks-button">В закладки</a>
@@ -311,33 +314,20 @@
       <section class="modal modal-form">
         <h2 class="visually-hidden">Форма отправки письма</h2>
         <form class="letter-form" method="post" action="https://echo.htmlacademy.ru">
-          <div>
-            <p>
-              <label class="letter-label" for="name">Ваше имя:</label>
-              <input class="letter-input" type="text" name="name" id="name" placeholder="Имя Фамилия">
-            </p>
-            <p>
-              <label class="letter-label" for="e-mail">Ваш e-mail:</label>
-              <input class="letter-input" type="text" name="e-mail" id="e-mail" placeholder="email@example.com">
-            </p>
-            <button class="close-button" type="button" aria-label="Закрыть окно"></button>
+          <div class="letter-form-container">
+            <div class="upper-letter-form-container">
+              <p>
+                <label class="letter-label" for="name">Ваше имя:</label>
+                <input class="letter-input" type="text" name="name" id="name" placeholder="Имя Фамилия">
+              </p>
+              <p>
+                <label class="letter-label" for="e-mail">Ваш e-mail:</label>
+                <input class="letter-input" type="text" name="e-mail" id="e-mail" placeholder="email@example.com">
+              </p>
+            </div>
             <p>
               <label class="letter-label" for="letter-text">Текст письма:</label>
               <input class="letter-input letter-input-for-text" type="text" name="letter-text" id="letter-text" placeholder="В свободной форме">
-            </p>
-          </div>
-          <div class="submit-form">
-            <button class="submit-button" type="submit">Отправить</button>
-          </div>
-        </form>
-      </section>
-      <section class="modal modal-login-form">
-        <h2 class="visually-hidden">Форма авторизации пользователя</h2>
-        <form class="login-form" method="post" action="https://echo.htmlacademy.ru">
-          <div>
-            <p>
-              <label class="login-label" for="login">Ваше имя:</label>
-              <input class="login-input" type="text" name="login" id="login" placeholder="Представьтесь, пожалуйста">
             </p>
             <button class="close-button" type="button" aria-label="Закрыть окно"></button>
           </div>
