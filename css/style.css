@@ -1218,7 +1218,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-list:nth-of-type(2) {
-  display: none;
+  /*display: none;*/
   background-image: url("../image/warranty.png");
   background-repeat: no-repeat;
   background-size: 389px 283px;
@@ -1226,7 +1226,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-list:last-of-type {
-  display: none;
+  /*display: none;*/
   background-image: url("../image/credit.png");
   background-repeat: no-repeat;
   background-size: 465px 285px;
