@@ -424,7 +424,7 @@ input[type="radio"].visually-hidden {
   height: 18px;
 }
 
-.user-rofile:hover path,
+.user-profile:hover path,
 .user-profile:focus path {
   fill: #000000;
 }
@@ -1878,7 +1878,7 @@ input[type="radio"].visually-hidden {
   position: fixed;
   top: 120px;
   left: 50%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 620px;
@@ -2003,7 +2003,7 @@ input[type="radio"].visually-hidden {
   position: fixed;
   top: 120px;
   left: 50%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 620px;
@@ -2124,7 +2124,7 @@ input[type="radio"].visually-hidden {
 
 .modal-map {
   position: relative;
-  display: block;
+  display: none;
   width: 940px;
   margin: 0 auto;
 }
