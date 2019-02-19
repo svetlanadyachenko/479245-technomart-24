@@ -103,28 +103,10 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
-.search-form:hover::before {
-  opacity: 1;
+.search-form:active::before,
+.search-form:focus::before {
+  opacity: 0;
 }
-
-.search-form:active::before {
-  opacity: 0.5;
-}
-
-/*
-.search-input:active::before,
-.search-input:focus::before {
-  content: "";
-  position: absolute;
-  top: 12px;
-  left: 17px;
-  width: 17px;
-  height: 17px;
-  background-image: url("../image/icon-search-red.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-*/
 
 .search-input {
   width: 100%;
@@ -150,12 +132,18 @@ input[type="radio"].visually-hidden {
 
 .search-input:hover {
   background-color: #212a3a;
+  background-image: url("../image/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 17px center;
 }
 
 .search-input:active,
 .search-input:focus {
   color: #000000;
   background-color: #ffffff;
+  background-image: url("../image/icon-search-red.svg");
+  background-repeat: no-repeat;
+  background-position: 17px center;
 }
 
 .bookmarks-link {
@@ -402,76 +390,61 @@ input[type="radio"].visually-hidden {
 .user-page {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
 .user-form {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   width: 299px;
+  box-sizing: border-box;
+  padding-top: 13px;
+  padding-bottom: 11px;
+  padding-left: 13px;
+  padding-right: 10px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 3px;
 }
 
 .user-input {
-  width: 100%;
-  box-sizing: border-box;
-  padding-top: 14px;
-  padding-bottom: 11px;
-  padding-left: 47px;
-  padding-right: 69px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   line-height: 21px;
   font-weight: 400;
   color: #000000;
-  text-align: left;
-  background-color: #ffffff;
-  border: none;
-  border-radius: 3px;
+  text-align: center;
 }
 
 .user-input:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.user-form::before {
-  content: "";
-  position: absolute;
-  top: 15px;
-  left: 12px;
+.user-profile {
   width: 20px;
   height: 18px;
-  background-image: url("../image/icon-user.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
-.user-form:hover::before,
-.user-form:focus::before {
-  background-image: url("../image/icon-user-black.svg");
+.user-rofile:hover path,
+.user-profile:focus path {
+  fill: #000000;
 }
 
-.user-form:active::before {
-  background-image: url("../image/icon-user.svg");
+.user-profile:active path {
+  fill: #c5c5c5;
 }
 
-.user-form::after {
-  content: "";
-  position: absolute;
-  top: 15px;
-  right: 12px;
+.user-exit {
   width: 20px;
   height: 17px;
-  background-image: url("../image/icon-logout.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
 }
 
-.user-form:hover::after,
-.user-form:focus::after {
-  background-image: url("../image/icon-logout-black.svg");
+.user-exit:hover path,
+.user-exit:focus path {
+  fill: #000000;;
 }
 
-.user-form:active::after {
-  background-image: url("../image/icon-logout.svg");
+.user-exit:active path {
+  fill: #c5c5c5;
 }
 
 .user-page-link {
@@ -539,12 +512,16 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
-.site-navigation-item:hover {
+.site-navigation-item:hover,
+.site-navigation-item:focus,
+.site-navigation-item:hover a,
+.site-navigation-item:focus a{
+  color: #ffffff;
   background-color: #293449;
 }
 
 .site-navigation-item:active,
-.site-navigation a:active {
+.site-navigation-item:active a {
   color: rgba(255, 255, 255, 0.5);
   background-color: #1d2739;
 }
@@ -1898,13 +1875,14 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-basket {
-  position: absolute;
-  top: 411px;
-  left: 290px;
+  position: fixed;
+  top: 120px;
+  left: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 620px;
+  margin-left: -310px;
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
   box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
@@ -2022,13 +2000,14 @@ input[type="radio"].visually-hidden {
 }
 
 .modal-form {
-  position: absolute;
-  bottom: 201px;
-  left: 289px;
+  position: fixed;
+  top: 120px;
+  left: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 620px;
+  margin-left: -310px;
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
