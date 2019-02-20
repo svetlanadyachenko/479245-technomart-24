@@ -1,7 +1,7 @@
 body {
   position: relative;
-  width: 1200px;
-  margin: auto;
+  min-width: 960px;
+  margin: 0;
   padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
@@ -35,22 +35,27 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
 .main-header {
   display: flex;
   flex-direction: column;
-  width: 1200px;
   background-color: #f4f7f9;
 }
 
 .user-navigation {
   position: relative;
-  width: 1200px;
+  width: 960px;
+  margin: 0;
   background-color: #293449;
 }
 
 .header-logo {
   position: absolute;
-  left: 130px;
+  left: 10px;
   width: 220px;
   height: 47px;
   padding-left: 55px;
@@ -86,7 +91,7 @@ input[type="radio"].visually-hidden {
   position: relative;
   display: inline-block;
   width: 270px;
-  margin-left: 350px;
+  margin-left: 230px;
   background-color: #293449;
 }
 
@@ -1136,7 +1141,7 @@ input[type="radio"].visually-hidden {
 
 .service-container {
   width: 398px;
-  margin-left: 130px;
+  margin-left: 10px;
   padding-top: 68px;
   padding-bottom: 28px;
 }
@@ -1347,15 +1352,28 @@ input[type="radio"].visually-hidden {
 }
 
 .about-company ul {
-  list-style-image: url("../image/red-line.png");
+  list-style: none;
 }
 
 .about-company li {
+  position: relative;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 36px;
   font-weight: 400;
   color: #000000;
+}
+
+.about-company li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  width: 25px;
+  height: 2px;
+  background-image: url("../image/red-line.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .about-company a {
@@ -1761,6 +1779,8 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   align-items: center;
   margin: 0;
+  padding-top: 11px;
+  padding-bottom: 12px;
   padding-left: 19px;
   padding-right: 17px;
   background-color: #f7f3ec;
@@ -1768,6 +1788,8 @@ input[type="radio"].visually-hidden {
 }
 
 .sorting-section-title {
+  display: block;
+  margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -1777,6 +1799,7 @@ input[type="radio"].visually-hidden {
 }
 
 .sorting-list {
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -1814,8 +1837,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   justify-content: space-between;
   width: 43px;
-  padding-top: 10px;
-  padding-bottom: 9px;
+  margin: 0;
+  padding: 0;
 }
 
 .navigation path {
@@ -1889,7 +1912,6 @@ input[type="radio"].visually-hidden {
 }
 
 .about-product {
-  width: 1200px;
   padding-top: 67px;
   padding-bottom: 73px;
   background-color: #f4f7f9;
@@ -1898,7 +1920,7 @@ input[type="radio"].visually-hidden {
 .about-product h2 {
   margin: 0;
   margin-bottom: 20px;
-  margin-left: 130px;
+  margin-left: 10px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 30px;
   line-height: 30px;
@@ -2180,14 +2202,13 @@ input[type="radio"].visually-hidden {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 1200px;
   color: #ffffff;
-  background-color:#32425c;
+  background-color: #293449;
 }
 
 .footer-logo {
   position: absolute;
-  left: 130px;
+  left: 20px;
   padding-left: 41px;
   padding-right: 41px;
   padding-top: 20px;
@@ -2208,8 +2229,10 @@ input[type="radio"].visually-hidden {
 .upper-footer-container {
   display: flex;
   justify-content: space-between;
-  padding-left: 130px;
-  padding-right: 130px;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #32425c;
 }
 
 .adress {
@@ -2299,6 +2322,8 @@ input[type="radio"].visually-hidden {
 .lower-footer-container {
   display: flex;
   justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 39px;
   padding-bottom: 35px;
   background-color: #293449;
