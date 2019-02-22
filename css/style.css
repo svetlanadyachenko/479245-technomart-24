@@ -1354,7 +1354,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-list:nth-of-type(2) {
-  /* display: none; */
+  display: none;
   background-image: url("../image/warranty.png");
   background-repeat: no-repeat;
   background-size: 389px 283px;
@@ -1362,7 +1362,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-list:last-of-type {
-  /* display: none; */
+  display: none;
   background-image: url("../image/credit.png");
   background-repeat: no-repeat;
   background-size: 465px 285px;
@@ -1389,12 +1389,14 @@ input[type="radio"].visually-hidden {
 }
 
 .service-warranty p {
+  margin-top: 25px;
   margin-left: 80px;
   width: 379px;
 }
 
 .service-credit p {
-  margin-bottom: 0;
+  margin-top: 25px;
+  margin-bottom: -5px;
   margin-left: 80px;
   width: 279px;
 }
@@ -1404,8 +1406,8 @@ input[type="radio"].visually-hidden {
   width: 195px;
   margin-top: 31px;
   margin-left: 80px;
-  padding-top: 14px;
-  padding-bottom: 12px;
+  padding-top: 11px;
+  padding-bottom: 9px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
