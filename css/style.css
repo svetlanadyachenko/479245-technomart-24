@@ -45,11 +45,13 @@ input[type="radio"].visually-hidden {
   outline: 3px solid red;
 }
 
+header {
+  background-color: #f4f7f9;
+}
 .main-header {
   display: flex;
   flex-direction: column;
   padding-bottom: 60px;
-  background-color: #f4f7f9;
 }
 
 .header-wrapper-container {
@@ -2363,12 +2365,16 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+footer {
+  background-color: #293449;
+}
+
 .main-footer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   color: #ffffff;
-  background-color: #293449;
+
 }
 
 .footer-logo {
