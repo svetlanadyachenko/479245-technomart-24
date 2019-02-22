@@ -42,16 +42,13 @@ input[type="radio"].visually-hidden {
   width: 960px;
   padding: 0 10px;
   margin: 0 auto;
-  outline: 3px solid red;
 }
 
-header {
-  background-color: #f4f7f9;
-}
 .main-header {
   display: flex;
   flex-direction: column;
   padding-bottom: 60px;
+  background-color: #f4f7f9;
 }
 
 .header-wrapper-container {
@@ -1357,7 +1354,7 @@ header {
 }
 
 .slider-list:nth-of-type(2) {
-  display: none;
+  /* display: none; */
   background-image: url("../image/warranty.png");
   background-repeat: no-repeat;
   background-size: 389px 283px;
@@ -1365,7 +1362,7 @@ header {
 }
 
 .slider-list:last-of-type {
-  display: none;
+  /* display: none; */
   background-image: url("../image/credit.png");
   background-repeat: no-repeat;
   background-size: 465px 285px;
@@ -2116,12 +2113,12 @@ header {
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
   box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
-  z-index: 30;
+  z-index: 100;
 }
 
 .product-in-basket {
   position: relative;
-  padding-top: 40px;
+  padding-top: 35px;
   padding-bottom: 40px;
   padding-left: 179px;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -2156,7 +2153,7 @@ header {
 
 .modal-basket .close-button {
   position: absolute;
-  top: 16px;
+  top: 10px;
   right: 9px;
   cursor: pointer;
 }
@@ -2166,8 +2163,8 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 620px;
-  padding-top: 37px;
-  padding-bottom: 37px;
+  padding-top: 36px;
+  padding-bottom: 36px;
   padding-left: 80px;
   padding-right: 80px;
   background-color: #f1f1f1;
@@ -2175,8 +2172,8 @@ header {
 
 .checkout {
   width: 220px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 11px;
+  padding-bottom: 9px;
   padding-left: 59px;
   padding-right: 62px;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -2201,8 +2198,8 @@ header {
 
 .continue-shopping {
   width: 220px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 11px;
+  padding-bottom: 9px;
   padding-left: 42px;
   padding-right: 46px;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -2240,7 +2237,7 @@ header {
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
   box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
-  z-index: 30;
+  z-index: 100;
 }
 
 .letter-form-container {
@@ -2248,10 +2245,10 @@ header {
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 48px;
-  padding-bottom: 37px;
+  padding-top: 31px;
   padding-left: 80px;
   padding-right: 80px;
+  padding-bottom: 26px;
 }
 
 .upper-letter-form-container {
@@ -2259,9 +2256,13 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 460px;
+  margin: 0;
 }
 
 .letter-label {
+  display: block;
+  margin-bottom: 9px;
+  padding-top: 3px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 18px;
@@ -2273,8 +2274,9 @@ header {
 .letter-input {
   display: block;
   width: 220px;
-  padding-top: 14px;
-  padding-bottom: 15px;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 11px;
   padding-left: 16px;
   background-color: #ffffff;
   border: 2px solid #dee3e4;
@@ -2292,11 +2294,18 @@ header {
 
 .letter-input-for-text {
   width: 460px;
-  min-height: 88px;
-  padding-top: 13px;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 85px;
   padding-left: 16px;
   text-align: left;
   border-radius: 3px;
+}
+
+.letter-label-for-text {
+  margin-top: -9px;
+  margin-bottom: 9px;
+  padding-top: 3px;
 }
 
 .letter-input::placeholder {
@@ -2310,9 +2319,9 @@ header {
 
 .submit-form {
   display: block;
-  padding-top: 37px;
-  padding-bottom: 37px;
   width: 620px;
+  padding-top: 36px;
+  padding-bottom: 36px;
   background-color: #f4f4f4;
 }
 
@@ -2320,8 +2329,8 @@ header {
   display: block;
   width: 460px;
   margin: 0 auto;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 11px;
+  padding-bottom: 9px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -2345,28 +2354,27 @@ header {
 
 .modal-form .close-button {
   position: absolute;
-  top: 16px;
+  top: 10px;
   right: 9px;
   cursor: pointer;
 }
 
 .modal-map {
   position: relative;
-  display: block;
+  display: none;
   width: 940px;
+  height: 446px;
   margin: 0 auto;
+  margin-bottom: 30px;
+  box-shadow: 0px 0px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .modal-map .close-button {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: 9px;
+  right: 9px;
   background-color: transparent;
   cursor: pointer;
-}
-
-footer {
-  background-color: #293449;
 }
 
 .main-footer {
@@ -2374,7 +2382,7 @@ footer {
   flex-wrap: wrap;
   flex-direction: column;
   color: #ffffff;
-
+  background-color: #293449;
 }
 
 .footer-logo {
