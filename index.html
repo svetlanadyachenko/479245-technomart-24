@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700&amp;subset=cyrillic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet" type="text/css">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -191,42 +189,42 @@
           <div class="manufacturers-catalog">
             <ul class="manufacturers-list">
               <li class="manufacturers-item">
-                <a href="#">
+                <a class="manufacturers-link" href="#">
                   <img src="image/bosch.png" width="126" height="37" alt="Bosch" aria-label="Производитель Bosch">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a href="#">
+                <a class="manufacturers-link" href="#">
                   <img src="image/makita.png" width="123" height="40" alt="Makita" aria-label="Производитель Makita">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a href="#">
+                <a class="manufacturers-link" href="#">
                   <img src="image/dewalt.png" width="146" height="44" alt="Dewalt" aria-label="Производитель Dewalt">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a href="#">
+                <a class="manufacturers-link" href="#">
                   <img src="image/interscol.png" width="200" height="88" alt="Интерскoл" aria-label="Производитель Интерскoл">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a href="#">
+                <a class="manufacturers-link" href="#">
                   <img src="image/hitachi.png" width="169" height="31" alt="Hitachi" aria-label="Производитель Hitachi">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a href="#">
+                <a class="manufacturers-link" href="#">
                   <img src="image/lg.png" width="121" height="73" alt="LG" aria-label="Производитель LG">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a href="#">
+                <a class="manufacturers-link" href="#">
                   <img src="image/aeg.png" width="151" height="96" alt="AEG power solutions" aria-label="Производитель AEG power solutions">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a href="#">
+                <a class="manufacturers-link" href="#">
                   <img src="image/metabo.png" width="204" height="69" alt="Metabo" aria-label="Производитель Metabo">
                 </a>
               </li>
@@ -323,10 +321,21 @@
             <a class="map-link" href="#" aria-label="Адрес Техномарта: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
               <img src="image/map.png" width="300" height="158" alt="Адрес Техномарта: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
             </a>
-            <a href="#">Заблудились? Напишите нам!</a>
+            <a class="modal-form-link" href="#">Заблудились? Напишите нам!</a>
           </div>
         </section>
       </div>
+      <section class="modal modal-basket">
+        <h2 class="visually-hidden">Товар добавлен в корзину</h2>
+        <div class="product-in-basket">
+          <p>Товар добавлен в корзину!</p>
+          <button class="close-button" type="button" aria-label="Закрыть окно"></button>
+        </div>
+        <div class="basket-buy-buttons">
+          <a class="checkout" href="#">Оформить заказ</a>
+          <a class="continue-shopping" href="catalog.html">Продолжить покупки</a>
+        </div>
+      </section>
       <section class="modal modal-map">
         <h2 class="visually-hidden">Как до нас добраться?</h2>
         <img src="image/modal-map.png" width="940" height="446" alt="Адрес Техномарта: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
@@ -415,17 +424,17 @@
             <p class="copyright">© 2010-2019 Компания «Техномарт» Все права защищены</p>
             <ul class="social-button-list">
               <li>
-                <a class="social-button" href="#" aria-label="Техномарт Вконтакте">
+                <a class="social-button vk" href="#" aria-label="Техномарт Вконтакте">
                   <span class="visually-hidden">Вконтакте</span>
                 </a>
               </li>
               <li>
-                <a class="social-button" href="#" aria-label="Техномарт на Фейсбуке">
+                <a class="social-button fb" href="#" aria-label="Техномарт на Фейсбуке">
                   <span class="visually-hidden">Фейсбук</span>
                 </a>
               </li>
               <li>
-                <a class="social-button" href="#" aria-label="Техномарт в Инстаграме">
+                <a class="social-button insta" href="#" aria-label="Техномарт в Инстаграме">
                   <span class="visually-hidden">Инстаграм</span>
                 </a>
               </li>
@@ -444,5 +453,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>                                                                                                                                                                     
