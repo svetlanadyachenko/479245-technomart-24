@@ -18,7 +18,7 @@
             <span class="visually-hidden">Техномарт</span>
           </a>
           <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-            <input class="search-input" type="text" name="search" placeholder="Поиск:">
+            <input class="search-input" type="text" name="search" placeholder="Поиск:" aria-label="Поле поиска">
           </form>
           <a class="bookmarks-link" href="#">Закладки: 0</a>
           <a class="basket-link" href="#">Корзина: 0</a>
@@ -45,25 +45,25 @@
           <h2 class="visually-hidden">Навигация по сайту</h2>
           <ul class="site-navigation-list">
             <li class="site-navigation-item">
-              <a href="#">Главная</a>
+              <a class="site-navigation-link nav-index" href="#">Главная</a>
             </li>
             <li class="site-navigation-item">
-              <a href="#">Компания</a>
+              <a class="site-navigation-link nav-company" href="#">Компания</a>
             </li>
             <li class="site-navigation-item">
-              <a href="catalog.html">Каталог</a>
+              <a class="site-navigation-link nav-catalog" href="catalog.html">Каталог</a>
             </li>
             <li class="site-navigation-item">
-              <a href="#">Новости</a>
+              <a class="site-navigation-link nav-news" href="#">Новости</a>
             </li>
             <li class="site-navigation-item">
-              <a href="#">Спецпредложения</a>
+              <a class="site-navigation-link nav-promo" href="#">Спецпредложения</a>
             </li>
             <li class="site-navigation-item">
-              <a href="#">Доставка</a>
+              <a class="site-navigation-link nav-delivery" href="#">Доставка</a>
             </li>
             <li class="site-navigation-item">
-              <a href="#">Контакты</a>
+              <a class="site-navigation-link nav-contacts" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -192,42 +192,42 @@
             <ul class="manufacturers-list">
               <li class="manufacturers-item">
                 <a href="#">
-                  <img src="image/bosch.png" width="126" height="37" alt="Bosch">
+                  <img src="image/bosch.png" width="126" height="37" alt="Bosch" aria-label="Производитель Bosch">
                 </a>
               </li>
               <li class="manufacturers-item">
                 <a href="#">
-                  <img src="image/makita.png" width="123" height="40" alt="Makita">
+                  <img src="image/makita.png" width="123" height="40" alt="Makita" aria-label="Производитель Makita">
                 </a>
               </li>
               <li class="manufacturers-item">
                 <a href="#">
-                  <img src="image/dewalt.png" width="146" height="44" alt="Dewalt">
+                  <img src="image/dewalt.png" width="146" height="44" alt="Dewalt" aria-label="Производитель Dewalt">
                 </a>
               </li>
               <li class="manufacturers-item">
                 <a href="#">
-                  <img src="image/interscol.png" width="200" height="88" alt="Интерскoл">
+                  <img src="image/interscol.png" width="200" height="88" alt="Интерскoл" aria-label="Производитель Интерскoл">
                 </a>
               </li>
               <li class="manufacturers-item">
                 <a href="#">
-                  <img src="image/hitachi.png" width="169" height="31" alt="Hitachi">
+                  <img src="image/hitachi.png" width="169" height="31" alt="Hitachi" aria-label="Производитель Hitachi">
                 </a>
               </li>
               <li class="manufacturers-item">
                 <a href="#">
-                  <img src="image/lg.png" width="121" height="73" alt="LG">
+                  <img src="image/lg.png" width="121" height="73" alt="LG" aria-label="Производитель LG">
                 </a>
               </li>
               <li class="manufacturers-item">
                 <a href="#">
-                  <img src="image/aeg.png" width="151" height="96" alt="AEG power solutions">
+                  <img src="image/aeg.png" width="151" height="96" alt="AEG power solutions" aria-label="Производитель AEG power solutions">
                 </a>
               </li>
               <li class="manufacturers-item">
                 <a href="#">
-                  <img src="image/metabo.png" width="204" height="69" alt="Metabo">
+                  <img src="image/metabo.png" width="204" height="69" alt="Metabo" aria-label="Производитель Metabo">
                 </a>
               </li>
             </ul>
@@ -320,7 +320,9 @@
             <h2>Контакты</h2>
             <p>Вы можете забрать товар сами,
                заехав в наш офис:</p>
-            <img src="image/map.png" width="300" height="158" alt="Адрес Техномарта: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+            <a class="map-link" href="#" aria-label="Адрес Техномарта: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+              <img src="image/map.png" width="300" height="158" alt="Адрес Техномарта: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+            </a>
             <a href="#">Заблудились? Напишите нам!</a>
           </div>
         </section>
@@ -413,17 +415,17 @@
             <p class="copyright">© 2010-2019 Компания «Техномарт» Все права защищены</p>
             <ul class="social-button-list">
               <li>
-                <a class="social-button" href="#">
+                <a class="social-button" href="#" aria-label="Техномарт Вконтакте">
                   <span class="visually-hidden">Вконтакте</span>
                 </a>
               </li>
               <li>
-                <a class="social-button" href="#">
+                <a class="social-button" href="#" aria-label="Техномарт на Фейсбуке">
                   <span class="visually-hidden">Фейсбук</span>
                 </a>
               </li>
               <li>
-                <a class="social-button" href="#">
+                <a class="social-button" href="#" aria-label="Техномарт в Инстаграме">
                   <span class="visually-hidden">Инстаграм</span>
                 </a>
               </li>

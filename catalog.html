@@ -18,7 +18,7 @@
             <span class="visually-hidden">Техномарт</span>
           </a>
           <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-            <input class="search-input" type="text" name="search" placeholder="Поиск:">
+            <input class="search-input" type="text" name="search" placeholder="Поиск:" aria-label="Поле поиска">
           </form>
           <a class="bookmarks-link" href="#">Закладки: 0</a>
           <a class="basket-link basket-link-catalog" href="#">Корзина: 10</a>
@@ -57,25 +57,25 @@
           <h2 class="visually-hidden">Навигация по сайту</h2>
           <ul class="site-navigation-list">
             <li class="site-navigation-item">
-              <a href="index.html">Главная</a>
+              <a class="site-navigation-link nav-index" href="index.html">Главная</a>
             </li>
             <li class="site-navigation-item">
-              <a href="#">Компания</a>
+              <a class="site-navigation-link nav-company" href="#">Компания</a>
             </li>
             <li class="site-navigation-item">
-              <a href="#">Каталог</a>
+              <a class="site-navigation-link nav-catalog" href="#">Каталог</a>
             </li>
             <li class="site-navigation-item">
-              <a href="#">Новости</a>
+              <a class="site-navigation-link nav-news" href="#">Новости</a>
             </li>
             <li class="site-navigation-item">
-              <a href="#">Спецпредложения</a>
+              <a class="site-navigation-link nav-promo" href="#">Спецпредложения</a>
             </li>
             <li class="site-navigation-item">
-              <a href="#">Доставка</a>
+              <a class="site-navigation-link nav-delivery" href="#">Доставка</a>
             </li>
             <li class="site-navigation-item">
-              <a href="#">Контакты</a>
+              <a class="site-navigation-link nav-contacts" href="#">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -86,7 +86,9 @@
         <section class="catalog-position">
           <ul class="catalog-position-nav">
             <li class="icon-home">
-              <a href="index.html" aria-label="Возврат на главную страницу"></a>
+              <a href="index.html" aria-label="Возврат на главную страницу">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="12" viewBox="0 0 15 12"><g fill="#C1C6CE"><path d="M3 8v4h4V8h2v4h4V8L8 3.516z"/><path d="M14.831 6.365L13 4.751V0h-2v2.987L8.332.635c-.02-.017-.043-.023-.064-.037a.465.465 0 0 0-.08-.047.551.551 0 0 0-.095-.024C8.062.521 8.032.515 8 .515c-.031 0-.061.006-.092.012a.46.46 0 0 0-.095.025c-.028.011-.053.029-.08.046-.021.014-.045.02-.064.037l-6.498 5.73a.501.501 0 0 0 .33.875.497.497 0 0 0 .331-.125L8 1.677l6.169 5.438a.501.501 0 0 0 .662-.75z"/></g></svg>
+              </a>
             </li>
             <li>
               <a href="#">Каталог</a>
@@ -310,10 +312,10 @@
                 </li>
               </ul>
               <ul class="pagination-list">
-                <li class="pagination-item pagination-item-current"><a href="#" aria-label="Первая страница каталога">1</a></li>
-                <li class="pagination-item"><a href="#" aria-label="Вторая страница каталога">2</a></li>
-                <li class="pagination-item"><a href="#" aria-label="Третья страница каталога">3</a></li>
-                <li class="pagination-item"><a href="#" aria-label="Следующая страница каталога">Следующая</a></li>
+                <li><a class="pagination-item pagination-item-current" href="#" aria-label="Первая страница каталога">1</a></li>
+                <li><a class="pagination-item" href="#" aria-label="Вторая страница каталога">2</a></li>
+                <li><a class="pagination-item" href="#" aria-label="Третья страница каталога">3</a></li>
+                <li><a class="pagination-item text-page" href="#" aria-label="Следующая страница каталога">Следующая</a></li>
               </ul>
             </section>
           </section>
@@ -350,7 +352,7 @@
                 <span class="visually-hidden">Техномарт</span>
               </a>
               <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-              <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+              <a class="telephone" href="tel:+78125550555">+7 (812) 555-05-55</a>
             </section>
             <section class="footer-navigation-list">
               <h2 class="visually-hidden">Навигация по сайту</h2>
@@ -396,17 +398,17 @@
             <p class="copyright">© 2010-2019 Компания «Техномарт» Все права защищены</p>
             <ul class="social-button-list">
               <li>
-                <a class="social-button" href="#">
+                <a class="social-button" href="#" aria-label="Техномарт Вконтакте">
                   <span class="visually-hidden">Вконтакте</span>
                 </a>
               </li>
               <li>
-                <a class="social-button" href="#">
+                <a class="social-button" href="#" aria-label="Техномарт на Фейсбуке">
                   <span class="visually-hidden">Фейсбук</span>
                 </a>
               </li>
               <li>
-                <a class="social-button" href="#">
+                <a class="social-button" href="#" aria-label="Техномарт в Инстаграме">
                   <span class="visually-hidden">Инстаграм</span>
                 </a>
               </li>
