@@ -1,65 +1,62 @@
 var link = document.querySelector(".modal-form-link");
 var popup = document.querySelector(".modal-form");
 var close = popup.querySelector(".close-button");
-var linkmap = document.querySelector(".map-link");
-var popupmap = document.querySelector(".modal-map");
-var closemap = popupmap.querySelector(".close-button");
-var linkbasket = document.querySelector(".buy-button");
-var popupbasket = document.querySelector(".modal-basket");
-var closebasket = popupbasket.querySelector(".close-button");
-var linkdelivery = document.querySelector(".service-delivery-button");
-var sliderdelivery = document.querySelector(".slider-delivery-list");
-var linkwarranty = document.querySelector(".service-warranty-button");
-var sliderwarranty = document.querySelector(".slider-warranty-list");
-var linkcredit = document.querySelector(".service-credit-button");
-var slidercredit = document.querySelector(".slider-credit-list");
-var redbasket = document.querySelector(".basket-link");
-var linkbookmarks = document.querySelector(".bookmarks-button");
-var redbookmarks = document.querySelector(".bookmarks-link");
-var iconleftlink = document.querySelector(".icon-left");
-var perforators = document.querySelector(".perforators");
-var drills = document.querySelector(".drills");
-var iconrightlink = document.querySelector(".icon-right");
-var iconleftlinkperforators = document.querySelector(".icon-left-perforators");
-var perforators = document.querySelector(".perforators");
-var drills = document.querySelector(".drills");
-var iconrightlinkperforators = document.querySelector(".icon-right-perforators");
-var perforatorsshow = document.querySelector(".perforators-show");
-var drillsnone = document.querySelector(".drills-none");
+var username = popup.querySelector("[name=name]");
+var form = popup.querySelector("form");
+var email = popup.querySelector("[name=e-mail]");
+var text = popup.querySelector("[name=letter-text]");
+var isStorageSupport = true;
+var storage = "";
 
-iconleftlink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  perforators.classList.add("perforators-show");
-  drills.classList.add("drills-none");
-});
-
-iconrightlink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  perforators.classList.add("perforators-show");
-  drills.classList.add("drills-none");
-});
-
-iconleftlinkperforators.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  perforatorsshow.classList.add("perforators");
-  drillsnone.classList.add("drills");
-});
-
-iconrightlinkperforators.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  perforatorsshow.classList.add("perforators");
-  drillsnone.classList.add("drills");
-});
+try {
+  storage = localStorage.getItem("username");
+} catch (err) {
+  isStorageSupport = false;
+}
 
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.add("modal-form-show");
+  if (storage) {
+    username.value = storage;
+    email.focus();
+  } else {
+    username.focus();
+  }
 });
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
   popup.classList.remove("modal-form-show");
+  popup.classList.remove("modal-form-error");
 });
+
+form.addEventListener("submit", function (evt) {
+  if (!username.value || !email.value || !text.value) {
+    evt.preventDefault();
+    popup.classList.remove("modal-form-error");
+    popup.offsetWidth = popup.offsetWidth;
+    popup.classList.add("modal-form-error");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("username", username.value);
+    }
+  }
+});
+
+window.addEventListener("keydown", function (evt) {
+  evt.preventDefault();
+  if (evt.keyCode === 27) {
+    if (popup.classList.contains("modal-form-show")) {
+      popup.classList.remove("modal-form-show");
+      popup.classList.remove("modal-form-error");
+    }
+  }
+});
+
+var linkmap = document.querySelector(".map-link");
+var popupmap = document.querySelector(".modal-map");
+var closemap = popupmap.querySelector(".close-button");
 
 linkmap.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -71,9 +68,24 @@ closemap.addEventListener("click", function (evt) {
   popupmap.classList.remove("modal-map-show");
 });
 
+window.addEventListener("keydown", function (evt) {
+  evt.preventDefault();
+  if (evt.keyCode === 27) {
+    if (popupmap.classList.contains("modal-map-show")) {
+        popupmap.classList.remove("modal-map-show");
+    }
+  }
+});
+
+var linkbasket = document.querySelector(".buy-button");
+var popupbasket = document.querySelector(".modal-basket");
+var redbasket = document.querySelector(".basket-link");
+var closebasket = popupbasket.querySelector(".close-button");
+
 linkbasket.addEventListener("click", function (evt) {
   evt.preventDefault();
   popupbasket.classList.add("modal-basket-show");
+  redbasket.classList.add("basket-link-red");
 });
 
 closebasket.addEventListener("click", function (evt) {
@@ -81,33 +93,107 @@ closebasket.addEventListener("click", function (evt) {
   popupbasket.classList.remove("modal-basket-show");
 });
 
-linkwarranty.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  sliderwarranty.classList.add("slider-warranty-list-show");
-  slidercredit.classList.add("slider-credit-list");
-  sliderdelivery.classList.add("slider-delivery-list-none");
-});
-
-linkcredit.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  slidercredit.classList.add("slider-credit-list-show");
-  sliderdelivery.classList.add("slider-delivery-list-none");
-  sliderwarranty.classList.add("slider-warranty-list");
-});
-
-linkdelivery.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  sliderdelivery.classList.add("slider-delivery-list");
-  sliderwarranty.classList.add("slider-warranty-list");
-  slidercredit.classList.add("slider-credit-list");
-});
-
-linkbasket.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  redbasket.classList.add("basket-link-red");
-});
+var linkbookmarks = document.querySelector(".bookmarks-button");
+var redbookmarks = document.querySelector(".bookmarks-link");
 
 linkbookmarks.addEventListener("click", function (evt) {
   evt.preventDefault();
   redbookmarks.classList.add("bookmarks-link-red");
+});
+
+var linkperforators = document.querySelector(".drills-show .slider-no-active") ;
+var linkdrills = document.querySelector(".perforators .slider-no-active");
+var sliderperforators = document.querySelector(".perforators");
+var sliderdrills = document.querySelector(".drills-show");
+var linkleft = document.querySelector(".drills-show .icon-left") ;
+var linkright = document.querySelector(".drills-show .icon-right");
+var linkleftperforators = document.querySelector(".perforators .icon-left") ;
+var linkrightperforators = document.querySelector(".perforators .icon-right");
+
+linkperforators.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  sliderperforators.classList.add("perforators-show");
+  sliderdrills.classList.add("drills");
+});
+
+linkdrills.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  sliderdrills.classList.remove("drills");
+  sliderperforators.classList.remove("perforators-show");
+});
+
+linkleft.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  sliderperforators.classList.add("perforators-show");
+  sliderdrills.classList.add("drills");
+});
+
+linkright.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  sliderperforators.classList.add("perforators-show");
+  sliderdrills.classList.add("drills");
+});
+
+linkleftperforators.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  sliderdrills.classList.remove("drills");
+  sliderperforators.classList.remove("perforators-show");
+});
+
+linkrightperforators.addEventListener("click", function(evt) {
+  evt.preventDefault();
+  sliderdrills.classList.remove("drills");
+  sliderperforators.classList.remove("perforators-show");
+});
+
+var linkdeliveryonwar = document.querySelector(".warranty-list .delivery-button");
+var linkdeliveryoncred = document.querySelector(".credit-list .delivery-button");
+var linkwarrantyondel = document.querySelector(".delivery-list-show .warranty-button");
+var linkwarrantyoncred = document.querySelector(".credit-list .warranty-button");
+var linkcreditondel = document.querySelector(".delivery-list-show .credit-button");
+var linkcreditonwar = document.querySelector(".warranty-list .credit-button");
+var sliderdelivery = document.querySelector(".delivery-list-show");
+var sliderwarranty = document.querySelector(".warranty-list");
+var slidercredit = document.querySelector(".credit-list");
+
+linkdeliveryonwar.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  sliderdelivery.classList.remove("delivery-list");
+  sliderwarranty.classList.remove("warranty-list-show");
+  slidercredit.classList.add("credit-list");
+});
+
+linkdeliveryoncred.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  sliderdelivery.classList.remove("delivery-list");
+  sliderwarranty.classList.add("warranty-list");
+  slidercredit.classList.remove("credit-list-show");
+});
+
+linkwarrantyondel.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  sliderdelivery.classList.add("delivery-list");
+  sliderwarranty.classList.add("warranty-list-show");
+  slidercredit.classList.add("credit-list");
+});
+
+linkwarrantyoncred.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  sliderdelivery.classList.add("delivery-list");
+  sliderwarranty.classList.add("warranty-list-show");
+  slidercredit.classList.remove("credit-list-show");
+});
+
+linkcreditondel.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  sliderdelivery.classList.add("delivery-list");
+  sliderwarranty.classList.add("warranty-list");
+  slidercredit.classList.add("credit-list-show");
+});
+
+linkcreditonwar.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  sliderdelivery.classList.add("delivery-list");
+  sliderwarranty.classList.remove("warranty-list-show");
+  slidercredit.classList.add("credit-list-show");
 });
