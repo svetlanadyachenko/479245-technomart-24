@@ -979,7 +979,7 @@ input[type="radio"].visually-hidden {
 .popular-goods-header,
 .popular-manufacturers-header {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   margin-top: 33px;;
@@ -995,6 +995,7 @@ input[type="radio"].visually-hidden {
 
 .popular-goods-header h2,
 .popular-manufacturers-header h2 {
+  width: 687px;
   margin: 0;
   padding: 0;
   padding-top: 3px;
@@ -1049,7 +1050,7 @@ input[type="radio"].visually-hidden {
 .index-catalog-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   width: 940px;
   margin: 0 auto;
@@ -1067,7 +1068,7 @@ input[type="radio"].visually-hidden {
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   width: 700px;
   margin: 0 auto;
@@ -2057,7 +2058,7 @@ input[type="radio"].visually-hidden {
 
 .sorting-section {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   margin: 0;
@@ -2083,14 +2084,16 @@ input[type="radio"].visually-hidden {
 }
 
 .sorting-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .sorting-item {
-  display: inline-block;
-  vertical-align: baseline;
+  display: block;
   padding: 0;
   margin-right: 68px;
 }
@@ -2104,8 +2107,6 @@ input[type="radio"].visually-hidden {
 }
 
 .sorting-item a {
-  display: inline-block;
-  vertical-align: baseline;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -2134,9 +2135,9 @@ input[type="radio"].visually-hidden {
 
 .navigation-button {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
-  width: 43px;
+  min-width: 43px;
   margin: 0;
   margin-left: 45px;
   padding: 0;

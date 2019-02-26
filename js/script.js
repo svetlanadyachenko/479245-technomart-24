@@ -45,8 +45,8 @@ form.addEventListener("submit", function (evt) {
 });
 
 window.addEventListener("keydown", function (evt) {
-  evt.preventDefault();
-  if (evt.keyCode === 27) {
+  if (evt.keyCode === 27)
+  evt.preventDefault(); {
     if (popup.classList.contains("modal-form-show")) {
       popup.classList.remove("modal-form-show");
       popup.classList.remove("modal-form-error");
@@ -69,8 +69,8 @@ closemap.addEventListener("click", function (evt) {
 });
 
 window.addEventListener("keydown", function (evt) {
-  evt.preventDefault();
-  if (evt.keyCode === 27) {
+  if (evt.keyCode === 27)
+  evt.preventDefault(); {
     if (popupmap.classList.contains("modal-map-show")) {
         popupmap.classList.remove("modal-map-show");
     }
@@ -91,6 +91,15 @@ linkbasket.addEventListener("click", function (evt) {
 closebasket.addEventListener("click", function (evt) {
   evt.preventDefault();
   popupbasket.classList.remove("modal-basket-show");
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27)
+  evt.preventDefault(); {
+    if (popupbasket.classList.contains("modal-basket-show")) {
+        popupbasket.classList.remove("modal-basket-show");
+    }
+  }
 });
 
 var linkbookmarks = document.querySelector(".bookmarks-button");

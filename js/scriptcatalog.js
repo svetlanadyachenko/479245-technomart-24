@@ -1,4 +1,4 @@
-var linkbasket = document.querySelectorAll(".catalog-section .buy-button");
+var linkbasket = document.querySelector(".buy-button");
 var popupbasket = document.querySelector(".modal-basket");
 var redbasket = document.querySelector(".basket-link");
 var closebasket = popupbasket.querySelector(".close-button");
@@ -14,7 +14,7 @@ closebasket.addEventListener("click", function (evt) {
   popupbasket.classList.remove("modal-basket-show");
 });
 
-var linkbookmarks = document.querySelectorAll(".catalog-section .bookmarks-button");
+var linkbookmarks = document.querySelector(".bookmarks-button");
 var redbookmarks = document.querySelector(".bookmarks-link");
 
 linkbookmarks.addEventListener("click", function (evt) {
