@@ -34,7 +34,14 @@ window.addEventListener("keydown", function (evt) {
 var linkbookmarks = document.querySelector(".bookmarks-button");
 var redbookmarks = document.querySelector(".bookmarks-link");
 
-linkbookmarks.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  redbookmarks.classList.add("bookmarks-link-red");
+parent.addEventListener("click", function (evt) {
+	evt.preventDefault();
+	var targetbookmarks  = evt.target;
+	while (targetbookmarks !== parent) {
+		if (targetbookmarks.className === "bookmarks-button") {
+		  redbookmarks.classList.add("bookmarks-link-red");
+		  return;
+		}
+	targetbookmarks = targetbookmarks.parentNode;
+	}
 });
