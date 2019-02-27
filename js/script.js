@@ -81,11 +81,19 @@ var linkbasket = document.querySelector(".buy-button");
 var popupbasket = document.querySelector(".modal-basket");
 var redbasket = document.querySelector(".basket-link");
 var closebasket = popupbasket.querySelector(".close-button");
+var parent = document.querySelector(".index-catalog-list");
 
-linkbasket.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popupbasket.classList.add("modal-basket-show");
-  redbasket.classList.add("basket-link-red");
+parent.addEventListener("click", function (evt) {
+	evt.preventDefault();
+	var target  = evt.target;
+	while (target !== parent) {
+		if (target.className === "buy-button") {
+		  popupbasket.classList.add("modal-basket-show");
+		  redbasket.classList.add("basket-link-red");
+		  return;
+		}
+	target = target.parentNode;
+	}
 });
 
 closebasket.addEventListener("click", function (evt) {
