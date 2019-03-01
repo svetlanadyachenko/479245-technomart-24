@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/stylemin.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
@@ -16,7 +16,8 @@
             <span class="visually-hidden">Техномарт</span>
           </a>
           <form class="search-form" method="get" action="https://echo.htmlacademy.ru">
-            <input class="search-input" type="text" name="search" placeholder="Поиск:" aria-label="Поле поиска">
+            <label class="visually-hidden" for="search">Поле поиска</label>
+            <input class="search-input" type="text" name="search" id="search" placeholder="Поиск:" aria-label="Поле поиска">
           </form>
           <a class="bookmarks-link" href="#">Закладки: 0</a>
           <a class="basket-link" href="#">Корзина: 0</a>
@@ -201,42 +202,42 @@
           <div class="manufacturers-catalog">
             <ul class="manufacturers-list">
               <li class="manufacturers-item">
-                <a class="manufacturers-link" href="#">
+                <a class="manufacturers-link bosch" href="#">
                   <img src="image/bosch.png" width="126" height="37" alt="Bosch" aria-label="Производитель Bosch">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a class="manufacturers-link" href="#">
+                <a class="manufacturers-link makita" href="#">
                   <img src="image/makita.png" width="123" height="40" alt="Makita" aria-label="Производитель Makita">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a class="manufacturers-link" href="#">
+                <a class="manufacturers-link dewalt" href="#">
                   <img src="image/dewalt.png" width="146" height="44" alt="Dewalt" aria-label="Производитель Dewalt">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a class="manufacturers-link" href="#">
+                <a class="manufacturers-link interscol" href="#">
                   <img src="image/interscol.png" width="200" height="88" alt="Интерскoл" aria-label="Производитель Интерскoл">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a class="manufacturers-link" href="#">
+                <a class="manufacturers-link hitachi" href="#">
                   <img src="image/hitachi.png" width="169" height="31" alt="Hitachi" aria-label="Производитель Hitachi">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a class="manufacturers-link" href="#">
+                <a class="manufacturers-link lg" href="#">
                   <img src="image/lg.png" width="121" height="73" alt="LG" aria-label="Производитель LG">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a class="manufacturers-link" href="#">
+                <a class="manufacturers-link aeg" href="#">
                   <img src="image/aeg.png" width="151" height="96" alt="AEG power solutions" aria-label="Производитель AEG power solutions">
                 </a>
               </li>
               <li class="manufacturers-item">
-                <a class="manufacturers-link" href="#">
+                <a class="manufacturers-link metabo" href="#">
                   <img src="image/metabo.png" width="204" height="69" alt="Metabo" aria-label="Производитель Metabo">
                 </a>
               </li>
@@ -265,7 +266,7 @@
               </ul>
               <section class="delivery">
                 <h3 class="service-title">Доставка</h3>
-                <p>Мы с удовольствием доставим ваш товар прямо<br>
+                <p>Мы с удовольствием доставим ваш товар прямо
                    к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем,<br>
                    поднимая его на ваш этаж!</p>
               </section>
@@ -285,7 +286,8 @@
               <section class="warranty">
                 <h3 class="service-title">Гарантия</h3>
                 <p>Если купленный у нас товар поломается или заискрит,<br>
-                   а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
+                   а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии.
+                   Мы обменяем сгоревший товар на новый.<br>
                    Дом уж восстановите как-нибудь сами.</p>
               </section>
             </div>
@@ -317,7 +319,7 @@
             <h2>Компания «Техномарт»</h2>
             <p>Настойщий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и
             строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.</p>
-            <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+            <p>Мы можем доставить ваш товар в самые отдаленные точки России!
                Техномарт работает со многими транспортными компаниями:</p>
             <ul>
               <li>Деловые линии</li>
@@ -466,6 +468,6 @@
         </div>
       </div>
     </footer>
-    <script src="js/scriptmin.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
-</html>                                                                                                                                                                     
+</html>
