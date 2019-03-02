@@ -479,19 +479,19 @@ input[type="radio"].visually-hidden {
   width: 280px;
   margin: 0;
   padding: 0;
-  padding-top: 11px;
-  padding-bottom: 9px;
   list-style: none;
 }
 
 .enter-user-button {
+  display: block;
   position: relative;
-  width: 121px;
+  width: 120px;
+  margin-bottom: 5px;
   margin-right: 10px;
   padding-left: 47px;
   padding-right: 27px;
-  padding-top: 12px;
-  padding-bottom: 8px;
+  padding-top: 11px;
+  padding-bottom: 10px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-size: 21px;
   line-height: 21px;
@@ -503,9 +503,11 @@ input[type="radio"].visually-hidden {
 }
 
 .registration-user-button {
+  display: block;
   width: 150px;
-  padding-top: 12px;
-  padding-bottom: 8px;
+  margin-bottom: 5px;
+  padding-top: 11px;
+  padding-bottom: 10px;
   padding-left: 23px;
   padding-right: 23px;
   font-family: "Cuprum", "Arial", sans-serif;
@@ -534,7 +536,7 @@ input[type="radio"].visually-hidden {
 .enter-user-button::before {
   content: "";
   position: absolute;
-  top: 15px;
+  top: 13px;
   left: 14px;
   width: 20px;
   height: 17px;
@@ -1318,12 +1320,8 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-item .image {
-  width: 218px;
-  height: 168px;
-}
-
-.catalog-item .image img {
   max-width: 218px;
+  height: 168px;
 }
 
 .goods-title {
